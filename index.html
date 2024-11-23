@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Advanced Features</title>
+    <link rel="stylesheet" href="todolist.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  
+    <div class="container">
+        
+        <div class="input-container">
+           <div class="class"><h1> To-Do List</h1></div>
+            <div class="class"><input type="text" id="taskInput" placeholder="📝 Add a new task..." /></div><br>
+            <div class="class"><input type="datetime-local" id="notifyTime" /></div><br>
+            <div class="class"><select id="taskCategory">
+              <option value="Work">Work</option>
+              <option value="Personal">Personal</option>
+          </select></div><br>
+            <div class="class"><button class="add-btn" onclick="addTask()">➕ Add Task</button></div><br>
+            <div class="class"><button class="voice-btn" onclick="startVoiceInput()">🎤 Add Task by Voice</button></div>
+        </div>
+        
+        <div class="progress-section">
+            <h3>Task Progress</h3><br>
+            <canvas id="progressChart" width="300" height="300"></canvas>
+            <br>
+            <p id="streakDisplay"><br>Streak: 0</p>
+        </div>
+        
+        <ul id="taskList" class="task-list"></ul>
+    </div>
+
+    <script src="todolist.js"></script>
+</body>
+</html>
